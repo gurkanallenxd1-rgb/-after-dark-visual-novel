@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#130f1b">
+  <title>AFTER DARK — V0.1</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="story.js"></script>
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="mast"><span>◆ &nbsp; AFTER DARK</span><span>V0.1</span></header>
+    <section id="menu" class="menu" aria-labelledby="title">
+      <p class="eyebrow">İSTANBUL · GECE YARISI</p>
+      <h1 id="title" tabindex="-1">AFTER<br><em>DARK</em></h1>
+      <p class="tagline">Son vapura kadar bir gecen var.</p>
+      <div class="menu-actions">
+        <button id="new" class="primary">Yeni Oyun <span aria-hidden="true">↗</span></button>
+        <button id="resume" disabled>Devam Et</button>
+        <button id="settings">Ayarlar</button>
+      </div>
+    </section>
+    <section id="game" class="game" aria-label="Hikâye" hidden>
+      <div class="chapter"><span class="eyebrow">BÖLÜM 01 · SON VAPUR</span><button id="home">Ana Menü</button></div>
+      <div id="portrait" class="portrait" aria-hidden="true" hidden></div>
+      <article class="dialogue" aria-label="Diyalog">
+        <h2 id="speaker" tabindex="-1"></h2>
+        <p id="line"></p>
+        <div id="choices" class="choices"></div>
+        <button id="next" class="primary">İlerle <span aria-hidden="true">→</span></button>
+      </article>
+      <p id="relations" class="relations" aria-label="İlişki puanları"></p>
+    </section>
+    <p id="status" role="status" hidden></p>
+  </main>
+  <dialog id="preferences" aria-labelledby="settings-title">
+    <form method="dialog">
+      <h2 id="settings-title">Ayarlar</h2>
+      <label class="setting"><input id="large" type="checkbox"> Büyük diyalog yazısı</label>
+      <label class="setting"><input id="art" type="checkbox"> İsteğe bağlı sanatsal çıplaklık görselleri (18+)</label>
+      <p>Yalnızca yetişkin karakterlerin yer aldığı, cinsel eylem içermeyen sahne çizimleri.</p>
+      <button class="primary">Kapat</button>
+    </form>
+  </dialog>
+</body>
+</html>
